@@ -100,7 +100,7 @@
                 self.formatter.${system}
 
                 # Go development tools
-                go_1_25
+                go
                 gopls
                 gotools
                 go-tools
