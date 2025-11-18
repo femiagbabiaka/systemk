@@ -195,7 +195,6 @@ func (p *p) CreatePod(ctx context.Context, pod *corev1.Pod) error {
 
 		id := string(pod.ObjectMeta.UID) // give multiple containers the same access? Need to test this.
 		uf = uf.Insert(kubernetesSection, "Namespace", pod.ObjectMeta.Namespace)
-		uf = uf.Insert(kubernetesSection, "ClusterName", pod.ObjectMeta.ClusterName)
 		uf = uf.Insert(kubernetesSection, "Id", id)
 		uf = uf.Insert(kubernetesSection, "Image", c.Image) // save (cleaned) image name here, we're not tracking this in the unit's name.
 

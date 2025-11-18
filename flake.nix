@@ -12,8 +12,6 @@
       supportedSystems = [
         "x86_64-linux" # 64-bit Intel/AMD Linux
         "aarch64-linux" # 64-bit ARM Linux
-        "x86_64-darwin" # 64-bit Intel macOS
-        "aarch64-darwin" # 64-bit ARM macOS
       ];
 
       # Helper for providing system-specific attributes
@@ -45,7 +43,7 @@
 
             # Update this hash after first build attempt when it fails
             # The build will tell you the correct hash
-            vendorHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+            vendorHash = "sha256-LH7BMxxMv014dvtPdv1lLQ+wCc8fhBTZ6CGP0wUtCI4=";
 
             # CGO is required for systemd bindings
             # On Linux, we need systemd development libraries
@@ -77,19 +75,9 @@
             };
           };
         in
-        # Only expose systemk package on Linux systems
-        if pkgs.stdenv.isLinux then
           {
             systemk = systemkPackage;
             default = systemkPackage;
-          }
-        else
-          {
-            # On non-Linux systems, provide a dummy default to satisfy flake requirements
-            default = pkgs.writeShellScriptBin "systemk-unavailable" ''
-              echo "systemk is only available on Linux systems with systemd"
-              exit 1
-            '';
           }
       );
 
