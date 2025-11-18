@@ -45,7 +45,7 @@
 
             # Update this hash after first build attempt when it fails
             # The build will tell you the correct hash
-            vendorHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+            vendorHash = "sha256-2A3/qRsCmGMCbDLjsEB8x2Gxgs612gvEckT6opFlkQc=";
 
             # CGO is required for systemd bindings
             # On Linux, we need systemd development libraries
