@@ -51,7 +51,6 @@ func (p *p) statsToPod(stats map[string]*unit.State) *corev1.Pod {
 	om := metav1.ObjectMeta{
 		Name:        Pod(name),
 		Namespace:   (uf.Contents[kubernetesSection]["Namespace"])[0],
-		ClusterName: (uf.Contents[kubernetesSection]["ClusterName"])[0],
 		UID:         types.UID((uf.Contents[kubernetesSection]["Id"])[0]),
 	}
 

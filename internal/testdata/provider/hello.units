@@ -24,6 +24,5 @@ Environment=OWNER="someone"
 
 [X-Kubernetes]
 Namespace=default
-ClusterName=
 Id=aa-bb
 Image=bash
