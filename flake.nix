@@ -100,7 +100,7 @@
                 self.formatter.${system}
 
                 # Go development tools
-                go_1_25
+                go
                 gopls
                 gotools
                 go-tools
@@ -117,12 +117,6 @@
             shellHook = ''
               echo "Systemk development environment"
               echo "Go version: $(go version)"
-              ${
-                if pkgs.stdenv.isLinux then
-                  ''echo "Systemd available for CGO builds"''
-                else
-                  ''echo "Warning: systemd not available on macOS - systemk requires Linux to build"''
-              }
             '';
           };
         }
