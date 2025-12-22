@@ -7,7 +7,7 @@ require (
 	github.com/coreos/go-systemd/v22 v22.6.0
 	github.com/gorilla/mux v1.8.1
 	github.com/pkg/errors v0.9.1
-	github.com/spf13/cobra v1.10.1
+	github.com/spf13/cobra v1.10.2
 	github.com/spf13/pflag v1.0.10
 	github.com/virtual-kubelet/virtual-kubelet v1.11.1-0.20251030182012-9a3aea767c73
 	k8s.io/api v0.34.2
